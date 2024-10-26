@@ -43,7 +43,7 @@ def create_crnn(input_shape, num_classes):
     return model
 
 # Загрузка изображений и меток из TSV файла
-base_path = "C:\\Users\\IvanS\\Projects\\Neur\\train\\train"  # Путь к папке с изображениями
+base_path = "/home/user/Recognition/train/train"  # Путь к папке с изображениями
 def load_data(data_tsv):
     try:
         data = pd.read_csv(data_tsv, sep='\t', header=0)  # Указываем, что первый ряд — заголовок
@@ -97,7 +97,7 @@ def load_data(data_tsv):
 
 
 # Загрузка данных
-train_images, train_labels = load_data('C:\\Users\\IvanS\\Projects\\Neur\\train.tsv')
+train_images, train_labels = load_data('/home/user/Recognition/train/train3.tsv')
 val_images, val_labels = train_images, train_labels
 
 # Преобразование меток в формат one-hot encoding
